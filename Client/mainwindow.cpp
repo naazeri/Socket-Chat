@@ -6,8 +6,7 @@
 MainWindow::MainWindow(QWidget *parent) :
 	QMainWindow(parent),
 	ui(new Ui::MainWindow),
-	condition(false)
-{
+	condition(false) {
 
 	ui->setupUi(this);
 
