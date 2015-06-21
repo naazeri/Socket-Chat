@@ -112,7 +112,7 @@ void MainWindow::findIP() {
 
 	foreach (const QHostAddress &address, QNetworkInterface::allAddresses()) {
 
-		if (address.protocol() == QAbstractSocket::IPv4Protocol /*&& address != QHostAddress(QHostAddress::LocalHost)*/) {
+		if (address.protocol() == QAbstractSocket::IPv4Protocol && address != QHostAddress(QHostAddress::LocalHost)) {
 
 			if(first) {
 
@@ -132,7 +132,19 @@ void MainWindow::findIP() {
 		}
 	}
 
-	ui->label_reciveText->setText(ui->label_reciveText->text() + "\n---------------------\n");
+	if (first) {
+
+		ui->label_reciveText->setText("We dont have IP. You can use Localhost IP.\n"
+									  "Localhost IP is: 127.0.0.1\n-------------------------------------\n");
+
+	}
+
+	else {
+
+		ui->label_reciveText->setText(ui->label_reciveText->text()
+									  + "\n---------------------\n");
+	}
+
 
 }
 

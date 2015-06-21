@@ -125,8 +125,8 @@ void MainWindow::findIP() {
 
 	if (first) {
 
-		ui->label_reciveText->setText("We Cant find any Server. You can use Local IP.\n"
-									  "Local IP is: 127.0.0.1\n-------------------------------------\n");
+		ui->label_reciveText->setText("We Cant find any Server. You can use Localhost IP.\n"
+									  "Localhost IP is: 127.0.0.1\n-------------------------------------\n");
 
 		ui->led_ip->setText("127.0.0.1");
 

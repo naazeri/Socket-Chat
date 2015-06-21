@@ -24,6 +24,5 @@ MOBILITY =
 
 DISTFILES +=
 
-RESOURCES += \
-    files.qrc
+RESOURCES +=
 
